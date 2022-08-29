@@ -1,0 +1,19 @@
+<h3>créer un nouveau tournoi</h3>
+<form [formGroup]="fg" (ngSubmit)="validForm()">
+  <p>Nom : <input type="text" formControlName="name"></p>
+  <p *ngIf="fg.controls['name'].invalid && fg.controls['name'].touched" style="color : red;">dzddz</p>
+  <p>Lieu : <input type="text" formControlName="place"></p>
+  <p>minimum de joueurs : <input type="number" formControlName="minPlayer"></p>
+  <p>maximum de joueurs : <input type="number" formControlName="maxPlayer"></p>
+  <p>minimum d'elo : <input type="number" formControlName="minElo"></p>
+  <p>maximum d'elo : <input type="number" formControlName="maxElo"></p>
+  <p>Categories : <select formControlName="categories">
+    <option value="0">Debutant</option>
+    <option value="1">Veteran</option>
+    <option value="2">Pro</option>
+  </select></p>
+  <p>Femme uniquement : <input type="checkbox" formControlName="womenOnly"></p>
+  <p>Date limite d'inscription : <input type="date" formControlName="inscriptionLimit"></p>
+
+  <p><button type="submit" [disabled]="fg.invalid">Valider</button></p>
+</form>

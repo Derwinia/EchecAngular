@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Nom</th><th>Lieu</th><th>Categorie</th><th>Elo</th><th>Statut</th><th>DateLimite</th><th>Nombre de joueurs</th><th>Actions </th>
+  </tr>
+  <tr *ngFor="let t of tournois">
+    <td>{{t.name}}</td>
+    <td>{{t.place}}</td>
+    <td > <p *ngFor="let c of t.categories">{{c.toString()}}</p></td>
+    <td>{{t.eloMin}} - {{t.eloMax}}</td>
+    <td>{{statut[t.statut]}}</td>
+    <td>{{t.dateLimiteInscription}}</td>
+    <td>{{t.nbJoueurActuel}} / {{t.nbJoueurMax}}</td>
+    <td><button>not implemented</button></td>
+  </tr>
+</table>
