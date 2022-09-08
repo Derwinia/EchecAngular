@@ -5,12 +5,14 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { SliderModule } from 'primeng/slider';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -21,11 +23,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputTextModule,
     InputNumberModule,
     DropdownModule,
+    SelectButtonModule,
     MultiSelectModule,
     CheckboxModule,
     CalendarModule,
     ReactiveFormsModule,
     FormsModule,
+    SliderModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     TableModule,
@@ -33,11 +39,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputTextModule,
     InputNumberModule,
     DropdownModule,
+    SelectButtonModule,
     MultiSelectModule,
     CheckboxModule,
     CalendarModule,
     ReactiveFormsModule,
     FormsModule,
+    SliderModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ]
 })
 export class SharedModule { }

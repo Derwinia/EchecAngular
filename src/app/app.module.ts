@@ -3,14 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { TournoiComponent } from './tournoi/tournoi.component';
-import { JoueurComponent } from './joueur/joueur.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CreateTournoiComponent } from './tournoi/create-tournoi/create-tournoi.component';
-import { ListTournoiComponent } from './tournoi/list-tournoi/list-tournoi.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from 'primeng/api';
+import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './pages/home/home.component';
+import { TournoiComponent } from './pages/tournoi/tournoi.component';
+import { ListTournoiComponent } from './pages/tournoi/list-tournoi/list-tournoi.component';
+import { CreateTournoiComponent } from './pages/tournoi/create-tournoi/create-tournoi.component';
+import { JoueurComponent } from './pages/joueur/joueur.component';
+import { CreateJoueurComponent } from './pages/joueur/create-joueur/create-joueur.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 @NgModule({
@@ -21,6 +24,8 @@ import { SharedModule } from 'primeng/api';
     JoueurComponent,
     CreateTournoiComponent,
     ListTournoiComponent,
+    LoginComponent,
+    CreateJoueurComponent,
   ],
   imports: [
     BrowserModule,

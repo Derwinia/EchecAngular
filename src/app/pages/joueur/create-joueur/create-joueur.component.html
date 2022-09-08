@@ -1,0 +1,22 @@
+<h3>créer un nouveau joueur</h3>
+<form [formGroup]="fg" (ngSubmit)="validForm()">
+  <p>pseudo : <input type="text" formControlName="pseudo"></p>
+  <p *ngIf="fg.controls['pseudo'].invalid && fg.controls['pseudo'].touched" style="color : red;">
+    Le nom doit faire entre 4 et 30 caractères
+  </p>
+
+  <p>Email : <input type="email" formControlName="email"></p>
+
+  <p>Password : <input type="password" formControlName="password"></p>
+
+  <p>Birthdate:</p>
+  <p-calendar formControlName="birthday"></p-calendar>
+
+  <p>Genre: </p>
+  <p-selectButton  [options]="genres" formControlName="genre" optionLabel="name" optionValue="code"></p-selectButton>
+
+  <p>Elo: {{this.fg.get('elo')?.value}}</p>
+  <p class="slider"><p-slider formControlName="elo" [step]="100" [min]="0" [max]="3000"></p-slider></p>
+
+  <p><button type="submit" [disabled]="fg.invalid">Valider</button></p>
+</form>

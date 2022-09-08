@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-joueur',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoueurComponent implements OnInit {
 
-  constructor() { }
+  user: any = {};
+
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+    this.user = this.loginService.user$.value
   }
 
 }

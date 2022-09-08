@@ -1,15 +1,19 @@
+import { JoueurModel } from './joueur.model';
+
 export interface TournoiModel {
-    resultat: number;
-    id : string,
-    name : string,
-    place : string,
-    nbJoueurActuel : number,
-    nbJoueurMin : number,
-    nbJoueurMax : number,
-    eloMin : number,
-    eloMax : number,
-    dateLimiteInscription : Date,
-    statut : number,
-    categories : string[],
-    ronde : number
+  id : string,
+  nom : string,
+  lieu : string,
+  nbJoueurActuel : number,
+  nbJoueurMin : number,
+  nbJoueurMax : number,
+  eloMin : number,
+  eloMax : number,
+  dateLimiteInscription : number,
+  statut : number,
+  categories : string[],
+  femmeOnly : boolean,
+  resultat: number,
+  ronde : number,
+  joueurs : Array<JoueurModel>
 }

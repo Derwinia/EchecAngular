@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Nom</th><th>Lieu</th><th>Categorie</th><th>Elo</th><th>Réserver aux femmes</th><th>Statut</th><th>DateLimite</th><th>Nombre de joueurs</th><th>Actions </th>
+  </tr>
+  <tr *ngFor="let t of tournois">
+    <td>{{t.nom}}</td>
+    <td>{{t.lieu}}</td>
+    <td > <p *ngFor="let c of t.categories">{{c.toString()}}</p></td>
+    <td>{{t.eloMin}} - {{t.eloMax}}</td>
+    <td>{{t.femmeOnly}}</td>
+    <td>{{statut[t.statut]}}</td>
+    <td>{{t.dateLimiteInscription|date}}</td>
+    <td>{{t.nbJoueurActuel}} / {{t.nbJoueurMax}}</td>
+    <td>
+      <button *ngIf="user.role == 'Admin'" (click)="remove(t)">Supprimer</button>
+      <button *ngIf="inscriptionOK(t)" (click)="inscription(t)">s'inscrire</button>
+    </td>
+  </tr>
+</table>

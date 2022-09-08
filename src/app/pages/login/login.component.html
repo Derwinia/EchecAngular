@@ -1,0 +1,13 @@
+<p *ngIf="isLogged">Vous êtes connecté en tant que {{user.name}} - {{user.role}} <button (click)="logout()">se deco</button></p>
+
+<form [formGroup]="fg" (ngSubmit)="submit()">
+  <div>
+      <input type="text" formControlName="pseudo">
+  </div>
+  <div>
+      <input type="password" formControlName="password">
+  </div>
+  <div>
+      <button>Se connecter</button>
+  </div>
+</form>
