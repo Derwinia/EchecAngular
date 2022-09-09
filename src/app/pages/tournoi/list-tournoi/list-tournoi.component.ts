@@ -82,17 +82,17 @@ export class ListTournoiComponent implements OnInit {
     this.joueurService.getJoueurById(this.user.id).subscribe({
       next : x => {console.log(x); this.joueurConnecte = x},
       error : e => console.error(e),
-      complete: () => {console.log("joueur recupere")
-      tournoi.joueurs.push(this.joueurConnecte)
-      this.tournoiService.addJoueur(tournoi.id, this.joueurConnecte.id).subscribe({
-        next : (x) => {},
-        error : e => console.error(e),
-        complete: ()=> console.log("inscription realise")
-      })
-    }
-      });
+      complete: () => {
+        console.log("joueur recupere")
+        tournoi.joueurs.push(this.joueurConnecte)
+        this.tournoiService.addJoueur(tournoi.id, this.joueurConnecte.id).subscribe({
+          next : (x) => {},
+          error : e => console.error(e),
+          complete: ()=> tournoi.nbJoueurActuel++
+        })
+      }
+    });
 
-    //tournoi.nbJoueurActuel++
   }
 
   desinscription(tournoi : TournoiModel){

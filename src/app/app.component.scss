@@ -1,0 +1,26 @@
+#Nav{
+  height: 100px;
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  justify-content: space-between;
+}
+
+#NavButton{
+  width: 25%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#NavChildren{
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#NavSign{
+  height: 100%;
+  padding: 25px;
+}

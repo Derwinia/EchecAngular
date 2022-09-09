@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SliderModule } from 'primeng/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
 
 @NgModule({
   declarations: [],
@@ -32,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SliderModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ConfirmDialogModule,
   ],
   exports: [
     TableModule,
@@ -48,6 +51,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SliderModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ConfirmDialogModule,
   ]
 })
 export class SharedModule { }

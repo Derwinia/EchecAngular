@@ -18,5 +18,8 @@
   <p>Elo: {{this.fg.get('elo')?.value}}</p>
   <p class="slider"><p-slider formControlName="elo" [step]="100" [min]="0" [max]="3000"></p-slider></p>
 
-  <p><button type="submit" [disabled]="fg.invalid">Valider</button></p>
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+  <button type="button" (click)="confirm()" pButton icon="pi pi-check" label="Créer l'utilisateur" [disabled]="fg.invalid"></button>
+
+  <!-- <p><button type="submit" [disabled]="fg.invalid">Valider</button></p> -->
 </form>

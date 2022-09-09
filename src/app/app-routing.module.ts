@@ -8,6 +8,7 @@ import { CreateTournoiComponent } from './pages/tournoi/create-tournoi/create-to
 import { JoueurComponent } from './pages/joueur/joueur.component';
 import { CreateJoueurComponent } from './pages/joueur/create-joueur/create-joueur.component';
 import { LoginComponent } from './pages/login/login.component';
+import { TournoiMenuComponent } from './composants/tournoi-menu/tournoi-menu.component';
 
 const routes: Routes = [
   {path : '', redirectTo : 'home', pathMatch : 'full'},

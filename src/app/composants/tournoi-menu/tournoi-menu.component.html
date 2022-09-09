@@ -1,0 +1,3 @@
+<ng-container *ngIf="fragment === 'tournoi'">
+  <button routerLink="listTournoi">Liste des tournois</button><button *ngIf="user.role == 'Admin'" routerLink="createTournoi">Créer tournoi</button>
+</ng-container>

@@ -14,6 +14,8 @@ import { JoueurComponent } from './pages/joueur/joueur.component';
 import { CreateJoueurComponent } from './pages/joueur/create-joueur/create-joueur.component';
 import { LoginComponent } from './pages/login/login.component';
 
+import {ConfirmationService} from 'primeng/api';
+import { TournoiMenuComponent } from './composants/tournoi-menu/tournoi-menu.component';
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { LoginComponent } from './pages/login/login.component';
     ListTournoiComponent,
     LoginComponent,
     CreateJoueurComponent,
+    TournoiMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { LoginComponent } from './pages/login/login.component';
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    ConfirmationService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,40 @@
-<div>
-  <button routerLink="home">Accueil</button>
-  <button routerLink="tournoi">Tournois</button>
-  <button routerLink="joueur">Joueur</button>
-  <button routerLink="login">Login</button>
+<div id="Nav">
+  <div id="NavButton">
+    <button pButton
+      type="button"
+      label="Secondary"
+      class="p-button-secondary p-button-raised p-button-rounded"
+      routerLink="home"
+      label="Accueil">
+    </button>
+    <button pButton
+      type="button"
+      label="Secondary"
+      class="p-button-secondary p-button-raised p-button-rounded"
+      routerLink="tournoi"
+      label="Tournois">
+    </button>
+    <button pButton
+      type="button"
+      label="Secondary"
+      class="p-button-secondary p-button-raised p-button-rounded"
+      routerLink="joueur"
+      label="Joueurs">
+    </button>
+  </div>
+  <div id="NavChildren">
+    <app-tournoi-menu></app-tournoi-menu>
+  </div>
+  <div id="NavSign">
+    <button pButton
+      type="button"
+      label="Secondary"
+      class="p-button-secondary p-button-raised p-button-rounded"
+      routerLink="login"
+      label="Se connecter">
+    </button>
+  </div>
 </div>
-<router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
+</div>
